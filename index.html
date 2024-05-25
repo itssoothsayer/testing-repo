@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Data Table</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Timezone Finder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
-        <h1>Student Data Table</h1>
-        <input type="text" id="search" placeholder="Search by Name or Email">
-        <div class="button-container">
-            <!-- <button id="sort-name-asc">Sort by Name A->Z</button>
-            <button id="sort-name-desc">Sort by Name Z->A</button> -->
-            <button id="sort-name-asc">
-                <div>Sort by Name</div>
-                <div> (A -> Z)</div>
-            </button>
-            <button id="sort-name-desc">
-                <div>Sort by Name</div>
-                <div> (Z -> A)</div>
-            </button>
-            <button id="sort-marks-asc">Sort by Marks (Ascending)</button>
-            <button id="sort-passing">Show Passing Students</button>
-            <button id="sort-class">Sort by Class</button>
-            <button id="sort-gender">Sort by Gender</button>
+        <h1>TimeZone API</h1>
+        <h2>Your Current Time Zone</h2>
+        <div class="timezone-box" id="current-timezone-box">
+            <p>Name Of Time Zone: <span id="current-timezone-name"></span></p>
+            <p>Lat: <span id="current-lat"></span> Long: <span id="current-lon"></span></p>
+            <p>Offset STD: <span id="current-offset-std"></span></p>
+            <p>Offset STD Seconds: <span id="current-offset-std-seconds"></span></p>
+            <p>Offset DST: <span id="current-offset-dst"></span></p>
+            <p>Offset DST Seconds: <span id="current-offset-dst-seconds"></span></p>
+            <p>Country: <span id="current-country"></span></p>
+            <p>Postcode: <span id="current-postcode"></span></p>
+            <p>City: <span id="current-city"></span></p>
         </div>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Marks</th>
-                        <th>Passing</th>
-                        <th>Gender</th>
-                        <th>Class</th>
-                    </tr>
-                </thead>
-                <tbody id="student-data">
-                </tbody>
-            </table>
+        <h2>Enter Address</h2>
+        <div class="address-input">
+            <input type="text" id="address-input" placeholder="Enter address">
+            <button onclick="fetchTimezoneByAddress()">Submit</button>
+        </div>
+        <p id="error-message" class="error-message">Please enter an address</p>
+        <h2>Your result</h2>
+        <div class="timezone-box" id="address-timezone-box" style="display: none;">
+            <p>Name Of Time Zone: <span id="address-timezone-name"></span></p>
+            <p>Lat: <span id="address-lat"></span> Long: <span id="address-lon"></span></p>
+            <p>Offset STD: <span id="address-offset-std"></span></p>
+            <p>Offset STD Seconds: <span id="address-offset-std-seconds"></span></p>
+            <p>Offset DST: <span id="address-offset-dst"></span></p>
+            <p>Offset DST Seconds: <span id="address-offset-dst-seconds"></span></p>
+            <p>Country: <span id="address-country"></span></p>
+            <p>Postcode: <span id="address-postcode"></span></p>
+            <p>City: <span id="address-city"></span></p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
-
 </html>
+
