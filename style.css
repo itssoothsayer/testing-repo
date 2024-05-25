@@ -13,20 +13,26 @@ body {
 .container {
     background-color: #fff;
     color: #000;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
 }
-
-h1, h2 {
-    margin: 0 0 20px 0;
+.black{
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 500px;
 }
+
+/* h1, h2 {
+    margin: 0 0 20px 0;
+} */
 
 .timezone-box {
     border: 1px solid #000;
     padding: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .address-input {
@@ -46,8 +52,8 @@ h1, h2 {
 .address-input button {
     padding: 10px 20px;
     border: none;
-    background-color: #000;
-    color: #fff;
+    background-color:white;
+    color: black;
     cursor: pointer;
     border-radius: 4px;
 }

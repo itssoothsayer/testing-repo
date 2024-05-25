@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timezone Finder</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>TimeZone API</h1>
-        <h2>Your Current Time Zone</h2>
+       
         <div class="timezone-box" id="current-timezone-box">
+            
+            <h1>TimeZone API</h1>
+            <h2>Your Current Time Zone</h2>
             <p>Name Of Time Zone: <span id="current-timezone-name"></span></p>
             <p>Lat: <span id="current-lat"></span> Long: <span id="current-lon"></span></p>
             <p>Offset STD: <span id="current-offset-std"></span></p>
@@ -21,6 +23,7 @@
             <p>Postcode: <span id="current-postcode"></span></p>
             <p>City: <span id="current-city"></span></p>
         </div>
+        <div class="black">
         <h2>Enter Address</h2>
         <div class="address-input">
             <input type="text" id="address-input" placeholder="Enter address">
@@ -39,8 +42,9 @@
             <p>Postcode: <span id="address-postcode"></span></p>
             <p>City: <span id="address-city"></span></p>
         </div>
+        </div>
     </div>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
